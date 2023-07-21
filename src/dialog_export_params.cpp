@@ -136,15 +136,19 @@ DialogExportOptions::DialogExportOptions( Project * project, const Lyrics& lyric
 	leTitle->setText( m_project->tag( Project::Tag_Title, "") );
 	leArtist->setText( m_project->tag( Project::Tag_Artist, "") );
 
-	if ( pLicensing->isValid() )
-	{
-		leTitleCreatedBy->setText( QString("Created by %1<br>http://www.ulduzsoft.com") .arg(APP_NAME) );
-	}
-	else
-	{
-		leTitleCreatedBy->setEnabled( false );
-		leTitleCreatedBy->setText( "Application not registered, this field cannot be modified" );
+	// if ( pLicensing->isValid() ) {
+    QString editedBy = m_project->tag( Project::Tag_CreatedBy, "")
+    if (editedBy.isEmpty()) {
+        leTitleCreatedBy->setText( QString("<br>") );
+    } else {
+	  leTitleCreatedBy->setText( QString(" ") );
     }
+	// }
+	// else
+	// {
+	// 	leTitleCreatedBy->setEnabled( false );
+	// 	leTitleCreatedBy->setText( "Application not registered, this field cannot be modified" );
+ //    }
 }
 
 

@@ -140,7 +140,7 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;yes&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#006e28;&quot;&gt;Click here to see the profile details&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+             <set>Qt::AlignVCenter|Qt::AlignHCenter</set>
             </property>
            </widget>
           </item>
