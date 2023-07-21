@@ -137,12 +137,7 @@ DialogExportOptions::DialogExportOptions( Project * project, const Lyrics& lyric
 	leArtist->setText( m_project->tag( Project::Tag_Artist, "") );
 
 	// if ( pLicensing->isValid() ) {
-    QString editedBy = m_project->tag( Project::Tag_CreatedBy, "")
-    if (editedBy.isEmpty()) {
-        leTitleCreatedBy->setText( QString("<br>") );
-    } else {
-	  leTitleCreatedBy->setText( QString(" ") );
-    }
+    leTitleCreatedBy->setText( QString(" ") );
 	// }
 	// else
 	// {
